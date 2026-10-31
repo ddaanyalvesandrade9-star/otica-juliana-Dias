@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#780375">
+    <meta name="description" content="Encontre armações femininas, masculinas e infantis, lentes de grau e óculos solares na Juliana Dias Ótica, em Campina Grande-PB. Conheça nossas opções e fale conosco pelo WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Juliana Dias Ótica | Óculos de Grau e Armações em Campina Grande">
+    <meta property="og:description" content="Armações femininas, masculinas e infantis, lentes de grau e óculos solares. Venha conhecer a Juliana Dias Ótica em Campina Grande-PB.">
+    <meta property="og:locale" content="pt_BR">
+    <title>Juliana Dias Ótica | Óculos de Grau e Armações em Campina Grande</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            color-scheme: light;
+            --purple: #780375;
+            --purple-dark: #580254;
+            --lilac: #DDA7DB;
+            --pink: #E8C4D8;
+            --ink: #302432;
+            --muted: #716773;
+            --paper: #FFFDFE;
+            --soft: #F8F3F8;
+            --line: #EDE5ED;
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+            --ease: cubic-bezier(.2, .75, .25, 1);
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+        body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+        img { display: block; max-width: 100%; }
+        a { color: inherit; text-decoration: none; }
+        button { font: inherit; }
+        .container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--purple); font-size: .73rem; font-weight: 700; letter-spacing: .15em; line-height: 1.5; text-transform: uppercase; }
+        .eyebrow::before { width: 25px; height: 1px; background: var(--lilac); content: ""; }
+        .section-title { margin: 14px 0 0; font: 500 clamp(2.2rem, 5vw, 4rem)/1.07 var(--serif); letter-spacing: -.035em; }
+        .section-copy { max-width: 620px; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+        .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 10px; padding: 0 22px; border: 1px solid var(--purple); border-radius: 999px; background: var(--purple); color: #fff; font-size: .82rem; font-weight: 700; transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease; }
+        .button:hover { transform: translateY(-2px); border-color: var(--purple-dark); background: var(--purple-dark); }
+        .button-outline { background: transparent; color: var(--purple); }
+        .button-outline:hover { background: var(--purple); color: #fff; }
+        .button-light { border-color: #fff; background: #fff; color: var(--purple); }
+        .button-light:hover { border-color: var(--soft); background: var(--soft); color: var(--purple-dark); }
+        .button svg, .inline-link svg { width: 17px; height: 17px; flex: 0 0 auto; }
+        .announcement { padding: 9px 16px; background: var(--purple); color: #fff; text-align: center; font-size: .75rem; letter-spacing: .04em; }
+        .announcement a { text-decoration: underline; text-underline-offset: 3px; }
+        .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(48,36,50,.08); background: rgba(255,253,254,.95); backdrop-filter: blur(14px); }
+        .nav-wrap { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 24px; }
+        .wordmark { display: inline-flex; align-items: center; flex: 0 0 auto; }
+        .brand-logo { display: block; width: 118px; height: 78px; object-fit: contain; }
+        .footer-brand-logo { width: 178px; height: 118px; object-position: left center; }
+        .desktop-nav { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 34px); }
+        .desktop-nav a, .mobile-nav a { color: var(--ink); font-size: .82rem; font-weight: 600; transition: color .2s ease; }
+        .desktop-nav a:hover, .mobile-nav a:hover { color: var(--purple); }
+        .nav-actions { display: flex; align-items: center; gap: 12px; }
+        .nav-actions .button { min-height: 42px; padding-inline: 17px; font-size: .76rem; }
+        .menu-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--purple); cursor: pointer; }
+        .menu-toggle svg { width: 21px; height: 21px; }
+        .mobile-nav { display: none; padding: 0 0 18px; }
+        .mobile-nav.open { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 20px; }
+        .mobile-nav a { padding: 8px 0; }
+        .hero { position: relative; overflow: hidden; padding: 70px 0 54px; background: linear-gradient(110deg, #fffdfE 0%, #fffdfE 53%, #f8f2f8 100%); }
+        .hero::after { position: absolute; top: -125px; right: -80px; width: 450px; height: 450px; border: 1px solid rgba(120,3,117,.1); border-radius: 50%; content: ""; pointer-events: none; }
+        .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr .92fr; align-items: center; gap: 60px; }
+        .hero-copy { padding: 20px 0 34px; }
+        .hero h1 { max-width: 690px; margin: 22px 0 18px; font: 500 clamp(3.35rem, 7.2vw, 6.35rem)/.98 var(--serif); letter-spacing: -.055em; }
+        .hero h1 em { color: var(--purple); font-weight: 500; }
+        .hero-lead { max-width: 580px; color: var(--muted); font-size: 1.04rem; line-height: 1.8; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+        .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 27px; color: var(--muted); font-size: .78rem; }
+        .hero-note svg { width: 18px; height: 18px; color: var(--purple); }
+        .hero-visual { position: relative; min-height: 520px; }
+        .hero-photo { position: absolute; inset: 12px 25px 20px 38px; overflow: hidden; border: 1px solid rgba(48,36,50,.08); border-radius: 32px 32px 110px 32px; background: #e7dce6; }
+        .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 38%; }
+        .hero-orbit { position: absolute; top: 0; right: 0; width: 140px; height: 140px; border: 1px solid var(--lilac); border-radius: 50%; }
+        .trust-strip { border-block: 1px solid var(--line); background: #fff; }
+        .trust-list { display: grid; grid-template-columns: repeat(3, 1fr); }
+        .trust-item { display: flex; min-height: 88px; align-items: center; justify-content: center; gap: 12px; padding: 16px; color: var(--ink); font-size: .83rem; font-weight: 600; text-align: center; }
+        .trust-item + .trust-item { border-left: 1px solid var(--line); }
+        .trust-item svg { width: 22px; height: 22px; color: var(--purple); }
+        section { scroll-margin-top: 84px; }
+        .intro { padding: 104px 0; }
+        .intro-grid { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 90px; }
+        .intro-art { position: relative; display: grid; min-height: 380px; place-items: center; overflow: hidden; border-radius: 5px 120px 5px 5px; background: var(--soft); }
+        .intro-art::before, .intro-art::after { position: absolute; border: 1px solid rgba(120,3,117,.13); border-radius: 50%; content: ""; }
+        .intro-art::before { width: 290px; height: 290px; }
+        .intro-art::after { width: 360px; height: 360px; }
+        .intro-art video { position: relative; z-index: 1; width: 90%; max-height: 290px; object-fit: contain; filter: drop-shadow(0 18px 22px rgba(48,36,50,.14)); }
+        .art-caption { position: absolute; z-index: 2; right: 20px; bottom: 18px; color: var(--muted); font-size: .68rem; }
+        .intro-copy .section-copy { margin: 20px 0 0; }
+        .intro-copy .inline-link { margin-top: 23px; }
+        .inline-link { display: inline-flex; align-items: center; gap: 8px; color: var(--purple); font-size: .83rem; font-weight: 700; }
+        .inline-link:hover { color: var(--purple-dark); }
+        .catalog { padding: 98px 0 105px; background: var(--soft); }
+        .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 38px; }
+        .section-heading .section-copy { max-width: 430px; margin: 0 0 5px; }
+        .category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .category-card { position: relative; display: flex; min-height: 252px; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 22px; border: 1px solid var(--line); border-radius: 8px; background: #fff; transition: transform .25s var(--ease), box-shadow .25s ease, border-color .25s ease; }
+        .category-card:hover { transform: translateY(-5px); border-color: var(--lilac); box-shadow: 0 16px 38px rgba(48,36,50,.08); }
+        .category-visual { display: grid; height: 118px; place-items: center; }
+        .category-visual img { width: 100%; height: 100%; object-fit: contain; }
+        .category-visual .kids-glasses { transform: translateY(-10px); }
+        .category-symbol { display: grid; width: 82px; height: 82px; place-items: center; border-radius: 50%; background: #f7eff7; color: var(--purple); }
+        .category-symbol svg { width: 43px; height: 43px; }
+        .category-card h3 { margin: 17px 0 6px; font: 600 1.17rem var(--serif); }
+        .category-card p { margin: 0; color: var(--muted); font-size: .76rem; line-height: 1.55; }
+        .category-arrow { position: absolute; right: 18px; top: 17px; color: var(--purple); font-size: 1.1rem; }
+        .catalog-cta { margin-top: 30px; text-align: center; }
+        .lenses { padding: 100px 0; }
+        .lenses-layout { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 70px; }
+        .lenses-visual { position: relative; display: grid; min-height: 475px; place-items: center; overflow: hidden; border-radius: 8px; background: #f5edf5; }
+        .lenses-visual img { width: 100%; height: 100%; min-height: 475px; object-fit: cover; }
+        .lenses-visual::after { display: none; }
+        .lenses-visual figcaption { position: absolute; z-index: 1; right: 18px; bottom: 18px; left: 18px; padding: 12px 15px; border-radius: 5px; background: rgba(255,253,254,.94); color: var(--ink); font: 500 1.15rem var(--serif); }
+        .lenses-copy .section-copy { margin: 17px 0 26px; }
+        .technology-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .technology-card { display: grid; grid-template-columns: 42px 1fr; gap: 13px; padding: 18px 15px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+        .technology-icon { display: grid; width: 40px; height: 40px; place-items: center; border-radius: 50%; background: #f7eff7; color: var(--purple); }
+        .technology-icon svg { width: 21px; height: 21px; }
+        .technology-card h3 { margin: 1px 0 5px; font-size: .91rem; }
+        .technology-card p { margin: 0; color: var(--muted); font-size: .75rem; line-height: 1.6; }
+        .disclaimer { margin: 18px 0 0; color: var(--muted); font-size: .72rem; line-height: 1.6; }
+        .services { padding: 94px 0 100px; background: #f8f3f8; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 38px; }
+        .service-card { padding: 26px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+        .service-card > span { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 50%; background: var(--purple); color: #fff; }
+        .service-card svg { width: 23px; height: 23px; }
+        .service-card h3 { margin: 20px 0 8px; font: 600 1.23rem var(--serif); }
+        .service-card p { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.7; }
+        .gallery { padding: 102px 0; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; }
+        .gallery-card { position: relative; min-height: 380px; overflow: hidden; border-radius: 8px; background: var(--soft); }
+        .gallery-card img { width: 100%; height: 380px; object-fit: cover; transition: transform .5s var(--ease); }
+        .gallery-card:hover img { transform: scale(1.035); }
+        .gallery-card figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 36px 20px 19px; background: linear-gradient(transparent, rgba(48,36,50,.72)); color: #fff; font-size: .86rem; font-weight: 600; }
+        .gallery-note { margin: 18px 0 0; color: var(--muted); font-size: .72rem; line-height: 1.6; }
+        .reviews { padding: 91px 0; background: var(--soft); }
+        .review-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 34px; }
+        .review-card { padding: 27px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+        .review-card svg { width: 25px; height: 25px; color: var(--purple); }
+        .review-card p { margin: 15px 0 17px; color: var(--ink); font: 500 1.15rem/1.6 var(--serif); }
+        .review-card strong { color: var(--muted); font-size: .79rem; }
+        .location { padding: 100px 0; }
+        .location-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 56px; align-items: center; }
+        .location-card { padding: 34px; border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: 0 16px 40px rgba(48,36,50,.05); }
+        .location-card h3 { margin: 0 0 20px; font: 600 1.6rem var(--serif); }
+        .location-info { display: grid; grid-template-columns: 25px 1fr; gap: 14px; padding: 15px 0; border-top: 1px solid var(--line); }
+        .location-info svg { width: 21px; height: 21px; color: var(--purple); }
+        .location-info strong { display: block; margin-bottom: 4px; font-size: .82rem; }
+        .location-info span, .location-info a { color: var(--muted); font-size: .85rem; line-height: 1.65; }
+        .location-info a:hover { color: var(--purple); }
+        .location-map { display: grid; min-height: 330px; place-items: center; padding: 25px; border-radius: 8px; background: radial-gradient(circle at 75% 25%, rgba(221,167,219,.48), transparent 34%), linear-gradient(135deg, #f8f3f8, #f0e5f0); text-align: center; }
+        .map-mark { display: grid; width: 70px; height: 70px; margin: 0 auto 17px; place-items: center; border-radius: 50%; background: var(--purple); color: #fff; box-shadow: 0 8px 22px rgba(120,3,117,.23); }
+        .map-mark svg { width: 30px; height: 30px; }
+        .location-map p { margin: 0 auto 19px; max-width: 290px; color: var(--muted); font-size: .85rem; line-height: 1.7; }
+        .contact-cta { position: relative; overflow: hidden; padding: 78px 0; background: var(--purple); color: #fff; text-align: center; }
+        .contact-cta::before, .contact-cta::after { position: absolute; width: 310px; height: 310px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; content: ""; }
+        .contact-cta::before { top: -205px; left: -50px; }
+        .contact-cta::after { right: -80px; bottom: -240px; width: 420px; height: 420px; }
+        .contact-cta .eyebrow { color: #f3d9f1; }
+        .contact-cta .eyebrow::before { background: var(--pink); }
+        .contact-cta h2 { position: relative; z-index: 1; max-width: 750px; margin: 18px auto 15px; font: 500 clamp(2.4rem, 5vw, 4.35rem)/1.08 var(--serif); letter-spacing: -.03em; }
+        .contact-cta p { position: relative; z-index: 1; margin: 0 auto; max-width: 560px; color: rgba(255,255,255,.82); font-size: .95rem; line-height: 1.75; }
+        .contact-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 26px; }
+        .contact-cta .button-outline { border-color: rgba(255,255,255,.55); color: #fff; }
+        .contact-cta .button-outline:hover { border-color: #fff; background: #fff; color: var(--purple); }
+        .site-footer { padding: 54px 0 22px; background: #302432; color: #fff; }
+        .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr 1fr; gap: 42px; padding-bottom: 38px; }
+        .footer-about { max-width: 330px; margin: 17px 0 0; color: rgba(255,255,255,.67); font-size: .82rem; line-height: 1.7; }
+        .footer-title { margin: 0 0 17px; color: var(--lilac); font-size: .74rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+        .footer-links { display: grid; gap: 12px; }
+        .footer-links a, .footer-address { color: rgba(255,255,255,.77); font-size: .81rem; line-height: 1.7; }
+        .footer-links a:hover { color: #fff; }
+        .footer-contact { display: grid; gap: 12px; }
+        .footer-contact a { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,.85); font-size: .81rem; }
+        .footer-contact svg { width: 17px; height: 17px; color: var(--lilac); }
+        .footer-bottom { display: flex; justify-content: space-between; gap: 16px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.54); font-size: .71rem; }
+        .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s var(--ease); }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        :focus-visible { outline: 3px solid var(--lilac); outline-offset: 4px; }
+        @media (max-width: 1020px) {
+            .desktop-nav { gap: 15px; }
+            .desktop-nav a { font-size: .75rem; }
+            .hero-grid { gap: 30px; }
+            .hero-visual { min-height: 450px; }
+            .category-grid { grid-template-columns: repeat(3, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .intro-grid, .lenses-layout { gap: 45px; }
+        }
+        @media (max-width: 760px) {
+            .container { width: min(100% - 36px, 560px); }
+            .announcement { font-size: .68rem; }
+            .nav-wrap { min-height: 70px; }
+            .desktop-nav, .nav-actions > .button { display: none; }
+            .menu-toggle { display: inline-flex; }
+            .hero { padding: 40px 0 28px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 15px; }
+            .hero-copy { padding: 15px 0 0; }
+            .hero h1 { max-width: 560px; font-size: clamp(3.2rem, 14vw, 5rem); }
+            .hero-lead { font-size: .95rem; }
+            .hero-visual { min-height: 0; aspect-ratio: .93; }
+            .hero-photo { inset: 0 0 14px; }
+            .image-note { bottom: 21px; left: 5px; max-width: 180px; font-size: .62rem; }
+            .trust-list { grid-template-columns: 1fr; padding-block: 8px; }
+            .trust-item { min-height: 58px; justify-content: flex-start; padding-inline: 8px; text-align: left; }
+            .trust-item + .trust-item { border-top: 1px solid var(--line); border-left: 0; }
+            .intro, .lenses, .gallery, .location { padding: 72px 0; }
+            .intro-grid, .lenses-layout, .location-grid { grid-template-columns: 1fr; gap: 32px; }
+            .intro-art { min-height: 290px; border-top-right-radius: 90px; }
+            .intro-art::before { width: 230px; height: 230px; }
+            .intro-art::after { width: 290px; height: 290px; }
+            .intro-art video { max-height: 230px; }
+            .section-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 26px; }
+            .section-heading .section-copy { font-size: .9rem; }
+            .catalog, .services, .reviews { padding: 72px 0; }
+            .category-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .category-card { min-height: 215px; padding: 16px; }
+            .category-visual { height: 95px; }
+            .category-card h3 { font-size: 1.03rem; }
+            .category-card p { font-size: .7rem; }
+            .lenses-visual, .lenses-visual img { min-height: 310px; max-height: 360px; }
+            .technology-grid { gap: 9px; }
+            .technology-card { grid-template-columns: 1fr; padding: 14px; }
+            .technology-card h3 { font-size: .83rem; }
+            .technology-card p { font-size: .7rem; }
+            .services-grid { grid-template-columns: 1fr; gap: 12px; }
+            .service-card { padding: 22px; }
+            .gallery-card, .gallery-card img { min-height: 290px; height: 290px; }
+            .review-grid { grid-template-columns: 1fr; }
+            .location-card { padding: 23px; }
+            .location-map { min-height: 270px; }
+            .contact-cta { padding: 64px 0; }
+            .contact-actions { flex-direction: column; align-items: stretch; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; }
+            .footer-brand { grid-column: 1 / -1; }
+            .footer-bottom { flex-direction: column; }
+        }
+        @media (max-width: 380px) {
+            .container { width: calc(100% - 28px); }
+            .hero-actions .button { width: 100%; }
+            .category-grid { grid-template-columns: 1fr 1fr; }
+            .category-card { padding: 13px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-brand { grid-column: auto; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+            .reveal { opacity: 1; transform: none; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Optician",
+      "name": "Juliana Dias Ótica",
+      "telephone": "+55 83 99334-5855",
+      "sameAs": ["https://www.instagram.com/otica_julianadias/"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua João Senador Cavalcanti de Arruda, 854, sala 4",
+        "addressLocality": "Campina Grande",
+        "addressRegion": "PB",
+        "addressCountry": "BR"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="announcement">Quem procura, acha! E você acabou de encontrar sua próxima ótica favorita em Campina Grande!</div>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="wordmark" href="#inicio" aria-label="Juliana Dias Ótica — início">
+                <img class="brand-logo" src="assets/juliana-dias/images/logo-juliana-dias.png" alt="Logo Juliana Dias Óticas">
+            </a>
+            <nav class="desktop-nav" aria-label="Navegação principal">
+                <a href="#sobre">A ótica</a>
+                <a href="#categorias">Armações</a>
+                <a href="#lentes">Lentes</a>
+                <a href="#atendimento">Atendimento</a>
+                <a href="#localizacao">Localização</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="button" href="https://wa.me/5583993345855" target="_blank" rel="noopener noreferrer">Fale conosco
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <nav class="container mobile-nav" id="mobile-menu" aria-label="Navegação para celular">
+            <a href="#sobre">A ótica</a>
+            <a href="#categorias">Armações</a>
+            <a href="#lentes">Lentes</a>
+            <a href="#atendimento">Atendimento</a>
+            <a href="#avaliacoes">Experiências</a>
+            <a href="#localizacao">Localização</a>
+            <a href="https://www.instagram.com/otica_julianadias/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Seu olhar, com estilo e confiança</span>
+                    <h1>Quem procura,<br><em>acha!</em></h1>
+                    <p class="hero-lead">E você acabou de encontrar sua próxima ótica favorita em Campina Grande. Armações, lentes e um atendimento próximo para ajudar você a escolher.</p>
+                    <div class="hero-actions">
+                        <a class="button" href="https://wa.me/5583993345855" target="_blank" rel="noopener noreferrer">Encontre seus próximos óculos
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                        <a class="button button-outline" href="#categorias">Conheça nossas armações</a>
+                    </div>
+                    <div class="hero-note">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                        Uma unidade em Campina Grande, Paraíba
+                    </div>
+                </div>
+                <div class="hero-visual" aria-label="Retrato de apresentação de Juliana Dias">
+                    <div class="hero-orbit" aria-hidden="true"></div>
+                    <div class="hero-photo">
+                        <img src="assets/juliana-dias/images/foto-juliana-armao-metal.jpg" alt="Juliana usando armação de óculos metálica" fetchpriority="high">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="trust-strip" aria-label="Informações da ótica">
+            <div class="container trust-list">
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5z"/><path d="m8 12 2.5 2.5L16 9"/></svg>
+                    Lentes de grau com garantia
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg>
+                    Atendimento para quem já tem receita
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+                    Ajuda para escolher com confiança
+                </div>
+            </div>
+        </div>
+
+        <section class="intro" id="sobre">
+            <div class="container intro-grid">
+                <div class="intro-art reveal">
+                    <video controls muted loop playsinline preload="metadata" poster="assets/juliana-dias/images/oculos-grau.png" aria-label="Vídeo de apresentação de óculos">
+                        <source src="assets/juliana-dias/videos/apresentacao-oculos.mp4" type="video/mp4">
+                        Seu navegador não oferece suporte à reprodução deste vídeo.
+                    </video>
+                    <span class="art-caption">Vídeo de óculos</span>
+                </div>
+                <div class="intro-copy reveal">
+                    <span class="eyebrow">Conheça a Juliana Dias Ótica</span>
+                    <h2 class="section-title">Cuidado para o seu olhar. Estilo para o seu dia.</h2>
+                    <p class="section-copy">Na Juliana Dias Ótica você encontra armações modernas, exclusivas e de qualidade, com preços que cabem no bolso. Trabalhamos com óculos femininos, masculinos e infantis e lentes de grau com garantia. Agende seu exame de vista ou traga sua receita. Cuidamos do seu olhar com estilo e confiança.</p>
+                    <p class="section-copy">Na Juliana Dias Ótica, você encontra armações femininas, masculinas e infantis, lentes para diferentes necessidades e ajuda especializada para escolher a melhor opção para você, com segurança, qualidade e ótimo custo-benefício.</p>
+                    <a class="inline-link" href="https://wa.me/5583993345855" target="_blank" rel="noopener noreferrer">Agende seu exame de vista
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog" id="categorias">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><span class="eyebrow">Um estilo para cada olhar</span><h2 class="section-title">Encontre sua próxima armação</h2></div>
+                    <p class="section-copy">Conheça as categorias e fale com a gente para consultar as opções. As imagens não confirmam disponibilidade específica de estoque.</p>
+                </div>
+                <div class="category-grid">
+                    <article class="category-card reveal">
+                        <span class="category-arrow" aria-hidden="true">↗</span>
+                        <div class="category-visual"><img src="assets/juliana-dias/images/foto-feminina-oculos.webp" alt="Armação feminina de óculos em tom rosado" loading="lazy"></div>
+                        <div><h3>Femininas</h3><p>Armações para expressar seu estilo.</p></div>
+                    </article>
+                    <article class="category-card reveal">
+                        <span class="category-arrow" aria-hidden="true">↗</span>
+                        <div class="category-visual"><img src="assets/juliana-dias/images/oculos-grau.png" alt="Armação de óculos ilustrativa" loading="lazy"></div>
+                        <div><h3>Masculinas</h3><p>Opções para diferentes estilos e rotinas.</p></div>
+                    </article>
+                    <article class="category-card reveal">
+                        <span class="category-arrow" aria-hidden="true">↗</span>
+                        <div class="category-visual"><img class="kids-glasses" src="assets/juliana-dias/images/oculos-infantil.webp" alt="Óculos de sol infantil vermelho" loading="lazy"></div>
+                        <div><h3>Infantis</h3><p>Armações pensadas para os pequenos.</p></div>
+                    </article>
+                    <article class="category-card reveal">
+                        <span class="category-arrow" aria-hidden="true">↗</span>
+                        <div class="category-visual"><img src="assets/juliana-dias/images/oculos-sol.png" alt="Óculos solares ilustrativos" loading="lazy"></div>
+                        <div><h3>Óculos solares</h3><p>Estilo para acompanhar os dias de sol.</p></div>
+                    </article>
+                </div>
+                <div class="catalog-cta"><a class="button button-outline" href="https://wa.me/5583993345855" target="_blank" rel="noopener noreferrer">Consulte nossas opções de armações</a></div>
+            </div>
+        </section>
+
+        <section class="lenses" id="lentes">
+            <div class="container lenses-layout">
+                <figure class="lenses-visual reveal">
+                    <img src="assets/juliana-dias/images/foto-armacao-metal-2.jpg" alt="Juliana usando armação de óculos metálica em outro ângulo" loading="lazy">
+                    <figcaption>Armações para diferentes estilos</figcaption>
+                </figure>
+                <div class="lenses-copy reveal">
+                    <span class="eyebrow">Lentes e tecnologias</span>
+                    <h2 class="section-title">A lente certa começa com a sua receita.</h2>
+                    <p class="section-copy">Conheça algumas tecnologias disponíveis em lentes e converse com nossa equipe para entender as opções adequadas à sua necessidade.</p>
+                    <div class="technology-grid">
+                        <article class="technology-card">
+                            <span class="technology-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.5"/><path d="M5 4 3 2m16 2 2-2"/></svg></span>
+                            <div><h3>Antirreflexo</h3><p>Ajuda a reduzir reflexos na superfície das lentes.</p></div>
+                        </article>
+                        <article class="technology-card">
+                            <span class="technology-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span>
+                            <div><h3>Proteção UV400</h3><p>Proteção contra radiação ultravioleta até 400 nm.</p></div>
+                        </article>
+                        <article class="technology-card">
+                            <span class="technology-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2"/></svg></span>
+                            <div><h3>Fotossensíveis</h3><p>Lentes que se adaptam à luminosidade.</p></div>
+                        </article>
+                        <article class="technology-card">
+                            <span class="technology-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M6 12h12m-9 5h6"/><path d="M3 4h18v16H3z"/></svg></span>
+                            <div><h3>Alto índice</h3><p>Pode permitir lentes mais finas, conforme o grau e as características da receita.</p></div>
+                        </article>
+                    </div>
+                    <p class="disclaimer">A indicação de lentes depende da receita e das características de cada caso. Consulte nossa equipe para conhecer as opções.</p>
+                    <a class="inline-link" href="https://wa.me/5583993345855" target="_blank" rel="noopener noreferrer">Consulte nossas opções de lentes
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="atendimento">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><span class="eyebrow">Cuidado em cada escolha</span><h2 class="section-title">Conte com nossa ajuda</h2></div>
+                    <p class="section-copy">Atendimento para você escolher armações e lentes com mais segurança e encontrar a opção que combina com a sua rotina.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card reveal">
+                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                        <h3>Exame de vista</h3>
+                        <p>Agende seu exame de vista com especialistas pelo WhatsApp.</p>
+                    </article>
+                    <article class="service-card reveal">
+                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M7 3h8l4 4v14H7z"/><path d="M14 3v5h5m-9 5h5m-5 4h5"/></svg></span>
+                        <h3>Já tem receita?</h3>
+                        <p>Traga sua receita e consulte as opções de lentes de grau com garantia.</p>
+                    </article>
+                    <article class="service-card reveal">
+                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 12s3.2-6 9-6 9 6 9 6-3.2 6-9 6-9-6-9-6Z"/><circle cx="12" cy="12" r="2.5"/><path d="m18 4 1 1 2-2"/></svg></span>
+                        <h3>Escolha especializada</h3>
+                        <p>Receba auxílio na escolha das armações e lentes para você.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="colecoes">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><span class="eyebrow">Inspire-se</span><h2 class="section-title">Óculos para muitos estilos</h2></div>
+                    <p class="section-copy">Armações femininas, masculinas, infantis, óculos de grau e solares: encontre opções para diferentes momentos.</p>
+                </div>
+                <div class="gallery-grid">
+                    <figure class="gallery-card reveal">
+                        <img src="assets/juliana-dias/images/foto-armacao-metal-1.jpg" alt="Juliana usando armação metálica de grau" loading="lazy">
+                        <figcaption>Armação metálica</figcaption>
+                    </figure>
+                    <figure class="gallery-card reveal">
+                        <img src="assets/juliana-dias/images/foto-juliana-armao-metal.jpg" alt="Retrato de Juliana usando óculos de armação metálica" loading="lazy">
+                        <figcaption>Óculos de grau</figcaption>
+                    </figure>
+                    <figure class="gallery-card reveal">
+                        <img src="assets/juliana-dias/images/oculos-preto.webp" alt="Homem usando óculos pretos solares" loading="lazy">
+                        <figcaption>Óculos solares</figcaption>
+                    </figure>
+                    <figure class="gallery-card reveal">
+                        <img src="assets/juliana-dias/images/armacao7.jpg" alt="Homem usando armação preta de óculos solares" loading="lazy">
+                        <figcaption>Armação masculina</figcaption>
+                    </figure>
+                </div>
+                <p class="gallery-note">Fotos enviadas pela ótica com referências de armações em uso. Consulte as opções disponíveis.</p>
+            </div>
+        </section>
+
+        <section class="reviews" id="avaliacoes">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><span class="eyebrow">Experiências compartilhadas</span><h2 class="section-title">O que clientes destacaram</h2></div>
+                    <p class="section-copy">Compartilhamos apenas os comentários recebidos como referência, sem atribuir notas ou avaliações não informadas.</p>
+                </div>
+                <div class="review-grid">
+                    <article class="review-card reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 11H5V6h7v7c0 3-2 5-5 5m12-7h-5V6h7v7c0 3-2 5-5 5"/></svg>
+                        <p>Deyvson Luan destacou a qualidade dos óculos e o atendimento.</p>
+                        <strong>Deyvson Luan</strong>
+                    </article>
+                    <article class="review-card reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 11H5V6h7v7c0 3-2 5-5 5m12-7h-5V6h7v7c0 3-2 5-5 5"/></svg>
+                        <p>Jordan Lima relatou ter sido muito bem atendido.</p>
+                        <strong>Jordan Lima</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="location" id="localizacao">
+            <div class="container location-grid">
+                <div class="reveal">
+                    <span class="eyebrow">Estamos em Campina Grande</span>
+                    <h2 class="section-title">Venha nos conhecer!</h2>
+                    <p class="section-copy">Será um prazer te receber na Juliana Dias Ótica. Temos uma única unidade física, no bairro Presidente Médici.</p>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Jo%C3%A3o+Senador+Cavalcanti+de+Arruda%2C+854%2C+sala+4%2C+Presidente+M%C3%A9dici%2C+Campina+Grande%2C+PB" target="_blank" rel="noopener noreferrer">Ver localização no mapa
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    </a>
+                </div>
+                <div class="location-card reveal">
+                    <h3>Juliana Dias Ótica</h3>
+                    <div class="location-info">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                        <div><strong>Endereço</strong><span>Rua João Senador Cavalcanti de Arruda, nº 854, sala 4, Presidente Médici, Campina Grande-PB.</span></div>
+                    </div>
+                    <div class="location-info">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11h18M5 11l1 9h12l1-9M4 11l2-7h12l2 7M9 15h.01M15 15h.01"/></svg>
+                        <div><strong>Ponto de referência</strong><span>Ao lado do Posto Ipiranga.</span></div>
+                    </div>
+                    <div class="location-info">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L8.1 11.4a16 16 0 0 0 4.5 4.5l1.9-1.9a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2Z"/></svg>
+                        <div><strong>Fale com a gente</strong><a href="https://wa.me/5583993345855" target="_blank" rel="noopener noreferrer">(83) 99334-5855 pelo WhatsApp</a></div>
+                    </div>
+                    <div class="location-info">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+                        <div><strong>Instagram</strong><a href="https://www.instagram.com/otica_julianadias/" target="_blank" rel="noopener noreferrer">@otica_julianadias</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta" id="contato">
+            <div class="container reveal">
+                <span class="eyebrow">Seu próximo olhar começa aqui</span>
+                <h2>Encontre seus próximos óculos.</h2>
+                <p>Agende seu exame, traga sua receita ou consulte nossas opções de armações e lentes. Venha nos conhecer, será um prazer te receber.</p>
+                <div class="contact-actions">
+                    <a class="button button-light" href="https://wa.me/5583993345855" target="_blank" rel="noopener noreferrer">Fale conosco pelo WhatsApp</a>
+                    <a class="button button-outline" href="https://www.instagram.com/otica_julianadias/" target="_blank" rel="noopener noreferrer">Acompanhe no Instagram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="wordmark footer-wordmark" href="#inicio" aria-label="Juliana Dias Ótica — início">
+                        <img class="brand-logo footer-brand-logo" src="assets/juliana-dias/images/logo-juliana-dias.png" alt="Logo Juliana Dias Óticas">
+                    </a>
+                    <p class="footer-about">Armações modernas, lentes para diferentes necessidades e atendimento próximo em Campina Grande, Paraíba.</p>
+                </div>
+                <div>
+                    <h2 class="footer-title">Navegação</h2>
+                    <nav class="footer-links" aria-label="Navegação do rodapé">
+                        <a href="#sobre">A ótica</a><a href="#categorias">Armações</a><a href="#lentes">Lentes</a><a href="#atendimento">Atendimento</a><a href="#localizacao">Localização</a>
+                    </nav>
+                </div>
+                <div>
+                    <h2 class="footer-title">Contato e localização</h2>
+                    <div class="footer-contact">
+                        <a href="https://wa.me/5583993345855" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L8.1 11.4a16 16 0 0 0 4.5 4.5l1.9-1.9a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2Z"/></svg>
+                            (83) 99334-5855
+                        </a>
+                        <a href="https://www.instagram.com/otica_julianadias/" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+                            @otica_julianadias
+                        </a>
+                        <span class="footer-address">Rua João Senador Cavalcanti de Arruda, nº 854, sala 4, Presidente Médici, Campina Grande-PB.<br>Ao lado do Posto Ipiranga.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span id="current-year">2026</span> Juliana Dias Ótica. Todos os direitos reservados.</span>
+                <a href="#inicio">Voltar ao início ↑</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector("#menu-toggle");
+        const mobileMenu = document.querySelector("#mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Abrir menu" : "Fechar menu");
+            mobileMenu.classList.toggle("open", !isOpen);
+        });
+
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Abrir menu");
+            });
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && mobileMenu.classList.contains("open")) {
+                mobileMenu.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Abrir menu");
+                menuToggle.focus();
+            }
+        });
+
+        document.querySelector("#current-year").textContent = String(new Date().getFullYear());
+
+        if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            const observer = new IntersectionObserver((entries, currentObserver) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        currentObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+        } else {
+            document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
+        }
+    </script>
+</body>
+</html>
